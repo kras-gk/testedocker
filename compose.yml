@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+    apache:
+        image: httpd:alpine3.20
+        container_name: 'apache'
+        ports: 
+            - 9999:80
+        volumes:
+            - ./site:/usr/local/apache2/htdocs/
+        mem_limit: 200m
